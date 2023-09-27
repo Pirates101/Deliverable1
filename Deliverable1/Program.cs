@@ -2,65 +2,69 @@
 {
     private static void Main(string[] args)
     {
+        int soda = 100;
+        int chips = 40;
+        int candy = 60;
+
         Console.Write("How many soda sold today: ");
-        int soda = int.Parse(Console.ReadLine());
+        int sodaSold = int.Parse(Console.ReadLine());
+        soda -= sodaSold;
 
+        if (40 >= soda)
+        {
+            Console.WriteLine("{0} {1} {2}", "Soda need to be restocked there are", soda, "left");
+
+        }
+        else if (-0 < soda)
+        {
+            Console.WriteLine("That value is too high, stock not adjusted");
+        }
+        else if (40 < soda)
+        {
+            Console.WriteLine("{0} {1} {2}", "Soda does not need to be restocked,there are", soda, "left");
+
+
+        }
         Console.Write("How many chips sold today: ");
-        int chips = int.Parse(Console.ReadLine());
+        int chipsSold = int.Parse(Console.ReadLine());
+        chips -= chipsSold;
 
-        Console.Write("How many candy sold today: ");
-        int candy = int.Parse(Console.ReadLine());
-
-        if (40 >= 100 - soda)
+        if (20 >= chips)
         {
-            Console.WriteLine("Soda need to be restocked, there are");
-            Console.WriteLine(100 - soda);
-            Console.WriteLine("left");
+            Console.WriteLine("{0} {1} {2}", "Chips need to be restocked there are", chips, "left");
+
         }
-        else if (soda > 100)
+        else if (0 > chips)
         {
             Console.WriteLine("That value is too high, stock not adjusted");
         }
-        else if (40 < 100 - soda)
+        else if (20 < chips)
         {
-            Console.WriteLine("Soda does not need to be restocked,there are");
-            Console.WriteLine(100 - soda);
-            Console.WriteLine("left");
+            Console.WriteLine("{0} {1} {2}", "Chips does not need to be restocked,there are", chips, "left");
+        }
 
-        }
-        if (20 >= 40 - chips)
-        {
-            Console.WriteLine("Chips need to be restocked, there are");
-            Console.WriteLine(40 - chips);
-            Console.WriteLine("left");
-        }
-        else if (soda > 100)
-        {
-            Console.WriteLine("That value is too high, stock not adjusted");
-        }
-        else if (20 < 40 - chips)
-        {
-            Console.WriteLine("Chips does not need to be restocked,there are");
-            Console.WriteLine(40 - chips);
-            Console.WriteLine("left");
+            Console.Write("How many candy sold today: ");
 
-        }
-        if (40 >= 60 - soda)
-        {
-            Console.WriteLine("Candy need to be restocked, there are");
-            Console.WriteLine(60 - candy);
-            Console.WriteLine("left");
-        }
-        else if (candy > 60)
-        {
-            Console.WriteLine("That value is too high, stock not adjusted");
-        }
-        else if (40 < 60 - candy)
-        {
-            Console.WriteLine("Candy does not need to be restocked,there are");
-            Console.WriteLine(60 - candy);
-            Console.WriteLine("left");
+            int candySold = int.Parse(Console.ReadLine());
+            candy -= candySold;
 
-        }
+            if (40 >= candy)
+            {
+                Console.WriteLine("{0} {1} {2}", "Candy need to be restocked there are", candy, "left");
+
+            }
+            else if (-0 > candy)
+            {
+                Console.WriteLine("That value is too high, stock not adjusted");
+            }
+            else if (40 < candy)
+            {
+                Console.WriteLine("{0} {1} {2}", "Candy does not need to be restocked,there are", candy, "left");
+
+
+            }
+
+        Console.WriteLine("{0} {1} {2} {3} {4} {5}", "Soda:", soda, "Chips:", chips, "Candy:", candy);
+        
     }
 }
